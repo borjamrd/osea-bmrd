@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "osea",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.css"
             ],
             "scripts": []
           },
@@ -84,15 +84,27 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "be91523c-b466-4f12-aa76-edc9bd5265b2"
+    "analytics": "be91523c-b466-4f12-aa76-edc9bd5265b2",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
