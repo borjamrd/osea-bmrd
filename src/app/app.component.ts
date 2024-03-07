@@ -12,9 +12,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'osea-bmrd';
-  param = { value: 'world' };
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
+
+
 }
