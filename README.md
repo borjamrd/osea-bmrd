@@ -1,6 +1,6 @@
-# OseaBmrd
+# OSEA - Borja Muñoz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+Hello, here you can play, add or just manage your favourite songs.
 
 ## Development server
 
@@ -16,12 +16,21 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via Jest
 
-## Running end-to-end tests
+## Tech used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+In order to create a fast-reliable application I've choose the following stack:
 
-## Further help
+- Angular 17
+- eslint
+- PrimeNG
+- TailwindCSS
+- Jest
+- ngx-translate
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Sections
+
+- [ ] Songs list
+- [ ] Song details
+- [ ] New song
