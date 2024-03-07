@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout/layout.component';
-import { HomeComponent } from './modules/home/home.component';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'home',
         pathMatch: 'full',
     },
     {
@@ -47,5 +46,5 @@ export const routes: Routes = [
         ],
     },
 
-    { path: '**', redirectTo: 'dashboard' },
+    { path: '**', redirectTo: 'home' },
 ];
