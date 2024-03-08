@@ -1,5 +1,8 @@
 <div class="flex gap-5 flex-col md:flex-row flex-wrap">
+    <div class="w-full lg:flex hidden">
 
+        <p-button routerLink="/songs/add-song">Add song</p-button>
+    </div>
 
     @for (song of songs$ | async; track $index) {
     @defer{
