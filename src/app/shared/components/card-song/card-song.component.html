@@ -1,0 +1,12 @@
+<p-card [header]="song.title" [style]="{ width: '350px', height: '350px' }">
+    <ng-template pTemplate="header">
+        <img class="max-h-52 rounded-t" [src]="song.poster" [alt]="song.title" />
+    </ng-template>
+    <div class="flex gap-2 flex-wrap">
+        @for (item of song.genre; track $index) {
+        <span> #{{item}}</span>
+        }
+    </div>
+
+
+</p-card>

@@ -1,7 +1,9 @@
 <p-sidebar [(visible)]="sidebarVisible">
-
-    <div class="flex flex-col gap-2">
+    <ng-template pTemplate="header">
         <h3 class="ms-4">Menu</h3>
+    </ng-template>
+    <div class="flex flex-col gap-2 mt-2">
+
         @for (item of menuItems; track $index) {
         <p-button [label]="item.text" [link]="true" [routerLink]="item.link"></p-button>
         }

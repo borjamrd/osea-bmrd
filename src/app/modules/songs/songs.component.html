@@ -1,1 +1,20 @@
-<p>songs works!</p>
+<div class="flex gap-5 flex-col md:flex-row flex-wrap">
+
+
+    @for (song of songs$ | async; track $index) {
+    @defer{
+    <osea-card-song [song]="song" />
+    }@loading {
+    <div> <osea-card-song-skelleton /></div>
+    }
+    @error {
+    Something went wrong
+    }
+    } @empty {
+    @for (item of [1,2,3,4,5,6,7,8,9,10]; track $index) {
+    <osea-card-song-skelleton />
+    }
+    }
+
+
+</div>
