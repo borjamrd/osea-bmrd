@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Artist, Company, Song } from '@app/core/interfaces';
-import { BehaviorSubject, Observable, delay, map, switchMap } from 'rxjs';
+import { BehaviorSubject, Observable, delay, filter, map, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -63,6 +63,25 @@ export class DataService {
       })
     );
   }
+
+  getSongInfo(id: string): Observable<Song> {
+    return this._http.get<Song>(`http://localhost:3000/songs/${id}`).pipe(delay(this.delayTime), switchMap(song => {
+      return this.getArtist(song.artist).pipe(
+        map(artist => {
+          song.artist = artist.name;
+          return song;
+        })
+      );
+    }))
+  }
+
+  getArtist(id: string | number): Observable<Artist> {
+    return this._http.get<Artist>(`http://localhost:3000/artists/${id}`).pipe(
+      delay(this.delayTime),
+
+    );
+  }
 }
+
 
 
