@@ -36,9 +36,7 @@ export class HeaderComponent {
 
     this.languageForm.valueChanges.pipe(distinctUntilChanged()).subscribe((r) => {
       if (!r.selectedLang?.code) return
-
-      console.log(r.selectedLang.code)
-      this._translate.use(r.selectedLang?.code)
+      this._translate.use(r.selectedLang.code)
     })
 
 
