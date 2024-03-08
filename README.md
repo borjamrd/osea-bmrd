@@ -1,3 +1,5 @@
+![Alt text](src/assets/images/dash.png "Title")
+
 # OSEA - Borja Muñoz
 
 Hello, here you can play, add or just manage your favourite songs.
