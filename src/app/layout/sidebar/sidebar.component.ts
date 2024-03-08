@@ -30,5 +30,8 @@ export class SidebarComponent {
     this._sidebar.getStatus().subscribe((r) => this.sidebarVisible = r)
 
   }
+  close() {
+    this._sidebar.changeOpenStatus(false)
+  }
 }
 
