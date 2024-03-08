@@ -2,6 +2,9 @@
 
 Hello, here you can play, add or just manage your favourite songs.
 
+## Run fake backend
+In order to retrieve song's data, you must `npm run server` and check `http://localhost:3000/`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
