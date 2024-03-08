@@ -27,6 +27,7 @@ export const provideTranslation = () => ({
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
+    provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
     importProvidersFrom([
       HttpClientModule,
       TranslateModule.forRoot(provideTranslation())
@@ -36,7 +37,7 @@ export const appConfig: ApplicationConfig = {
       useClass: ErrorInterceptor,
       multi: true,
     },
-    provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
+
     MessageService
   ]
 };

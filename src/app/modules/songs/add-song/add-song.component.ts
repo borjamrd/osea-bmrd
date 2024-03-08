@@ -8,6 +8,7 @@ import { ChipsModule } from 'primeng/chips'
 import { MessageService } from 'primeng/api';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ToastModule } from 'primeng/toast';
+import { TranslateModule } from '@ngx-translate/core';
 interface Country {
   name: string;
   code: string;
@@ -24,7 +25,7 @@ interface Genre {
 @Component({
   selector: 'osea-add-song',
   standalone: true,
-  imports: [ReactiveFormsModule, InputTextModule, MultiSelectModule, CalendarModule, DropdownModule, ChipsModule, InputNumberModule, ToastModule],
+  imports: [ReactiveFormsModule, InputTextModule, MultiSelectModule, CalendarModule, DropdownModule, ChipsModule, InputNumberModule, ToastModule, TranslateModule],
   providers: [MessageService],
   templateUrl: './add-song.component.html',
   styleUrl: './add-song.component.css'
