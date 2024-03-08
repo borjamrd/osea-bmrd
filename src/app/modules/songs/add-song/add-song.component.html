@@ -1,0 +1,41 @@
+<div class="flex justify-center items-center py-3 lg:p-20">
+    <form (ngSubmit)="submit()" class="flex flex-col gap-6" [formGroup]="newSong">
+        <span class="p-float-label">
+            <input pInputText id="title" formControlName="title" />
+            <label for="title">Title</label>
+        </span>
+
+        <span class="p-float-label">
+            <p-chips formControlName="artists" [max]="6" id="artists"></p-chips>
+            <label for="artists">Artists</label>
+        </span>
+        <p-multiSelect [options]="allGenres" formControlName="genres" placeholder="Genres" optionLabel="name"
+            display="chip" [showClear]="true"></p-multiSelect>
+
+        <p-multiSelect [options]="allCompanies" formControlName="company" placeholder="Companies" optionLabel="name"
+            display="chip" [showClear]="true"></p-multiSelect>
+
+
+        <p-dropdown [options]="allCountries" formControlName="country" optionLabel="name" [showClear]="true"
+            placeholder="Country"></p-dropdown>
+
+
+        <span class="p-float-label">
+            <p-calendar dateFormat="yy" formControlName="year" inputId="year"></p-calendar>
+            <label for="year">Year</label>
+        </span>
+        <span class="p-float-label">
+            <p-inputNumber inputId="integeronly" formControlName="score"> </p-inputNumber>
+            <label for="number-input">Score</label>
+        </span>
+        <p-button [disabled]="!newSong.valid" class="absolute right-5 bottom-5 lg:relative lg:mt-4 lg:ms-5"
+            type="submit">
+            <span class="hidden lg:block">Add song</span>
+            <span class="material-symbols-rounded lg:hidden ">
+                add
+            </span>
+        </p-button>
+    </form>
+</div>
+
+<p-toast position="top-right"></p-toast>

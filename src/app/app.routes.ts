@@ -22,11 +22,17 @@ export const routes: Routes = [
             },
             {
                 path: 'songs',
-                loadComponent: () =>
-                    import(
-                        '@modules/songs/songs.component'
-                    ).then((m) => m.SongsComponent),
+                loadComponent: () => import('@modules/songs/songs.component').then((m) => m.SongsComponent),
             },
+            {
+                path: 'songs/add-song',
+                loadComponent: () => import('@modules/songs/add-song/add-song.component').then((m) => m.AddSongComponent)
+            }, {
+
+                path: 'songs/:id',
+                loadComponent: () => import('@modules/songs/song-info/song-info.component').then((m) => m.SongInfoComponent)
+            }
+            ,
             {
                 path: 'artists',
                 loadComponent: () =>

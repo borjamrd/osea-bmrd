@@ -1,12 +1,14 @@
-<p-card [header]="song.title" [style]="{ width: '350px', height: '350px' }">
-    <ng-template pTemplate="header">
-        <img class="max-h-52 rounded-t" [src]="song.poster" [alt]="song.title" />
-    </ng-template>
-    <div class="flex gap-2 flex-wrap">
-        @for (item of song.genre; track $index) {
-        <span> #{{item}}</span>
-        }
-    </div>
+<a [routerLink]="'songs/' + song.id" class="no-underline">
+    <p-card [header]="song.title" [subheader]="song.artist.toString()" [style]="{ width: '350px', height: '400px' }">
+        <ng-template pTemplate="header">
+            <img class="max-h-52 object-cover w-full rounded-t-md" [src]="song.poster" [alt]="song.title" />
+        </ng-template>
+        <div class="flex gap-2 flex-wrap">
+            @for (item of song.genre; track $index) {
+            <span> #{{item}}</span>
+            }
+        </div>
 
 
-</p-card>
+    </p-card>
+</a>

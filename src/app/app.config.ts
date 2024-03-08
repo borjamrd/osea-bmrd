@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding, withViewTransitions } from '@angular/router';
 
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -26,8 +26,7 @@ export const provideTranslation = () => ({
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideAnimations(), // required animations providers
-    provideHttpClient(),
+    provideAnimations(),
     importProvidersFrom([
       HttpClientModule,
       TranslateModule.forRoot(provideTranslation())
@@ -37,7 +36,7 @@ export const appConfig: ApplicationConfig = {
       useClass: ErrorInterceptor,
       multi: true,
     },
-    provideRouter(routes),
+    provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
     MessageService
   ]
 };
