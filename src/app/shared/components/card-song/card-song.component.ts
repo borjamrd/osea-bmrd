@@ -1,5 +1,5 @@
-import { Component, Input, inject } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Song } from '@app/core/interfaces';
 import { CardModule } from 'primeng/card';
 @Component({
@@ -11,11 +11,8 @@ import { CardModule } from 'primeng/card';
 })
 export class CardSongComponent {
 
-  route = inject(ActivatedRoute)
 
 
   @Input() song!: Song
-  constructor() {
-    console.log(this.route)
-  }
+
 }
