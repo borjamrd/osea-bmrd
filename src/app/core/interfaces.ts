@@ -6,7 +6,7 @@ export interface Song {
     year: number;
     duration: number;
     rating: number;
-    artist: number;
+    artist: number | string;
 }
 
 export interface Artist {

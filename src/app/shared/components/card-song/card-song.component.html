@@ -1,4 +1,4 @@
-<p-card [header]="song.title" [style]="{ width: '350px', height: '350px' }">
+<p-card [header]="song.title" [subheader]="song.artist.toString()" [style]="{ width: '350px', height: '400px' }">
     <ng-template pTemplate="header">
         <img class="max-h-52 rounded-t" [src]="song.poster" [alt]="song.title" />
     </ng-template>

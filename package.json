@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "server": "json-server src/app/data/mock.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest --verbose",
