@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SidebarService } from '@app/shared/services/sidebar.service';
+import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 
@@ -9,15 +10,15 @@ import { SidebarModule } from 'primeng/sidebar';
 @Component({
   selector: 'osea-sidebar',
   standalone: true,
-  imports: [SidebarModule, CommonModule, ButtonModule, RouterModule],
+  imports: [SidebarModule, CommonModule, ButtonModule, RouterModule, TranslateModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
   sidebarVisible!: boolean
 
-  menuItems: { text: string, link: string }[] = [{ text: 'Canciones', link: 'songs' }, { text: 'Artistas', link: 'artists' }, {
-    text: 'Compañías discográficas', link: 'companies'
+  menuItems: { text: string, link: string }[] = [{ text: 'Songs', link: 'songs' }, { text: 'Artists', link: 'artists' }, {
+    text: 'Discographic companies', link: 'companies'
   }]
 
 

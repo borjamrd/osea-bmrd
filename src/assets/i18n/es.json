@@ -1,1 +1,13 @@
-{}
+{
+    "Songs": "Canciones",
+    "Artists": "Artistas",
+    "Title": "Título",
+    "Genres": "Géneros",
+    "Companies": "Compañías",
+    "Country": "País",
+    "Year": "Año",
+    "Score": "Puntuación",
+    "Discographic companies": "Compañías discográficas",
+    "Select any song to see its information and be able to modify it. You can also add new songs.": "Selecciona cualquier canción para ver si información y poder modicarla. También puedes agregar nuevas canciones",
+    "Add song": "Añadir canción"
+}

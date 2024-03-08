@@ -1,9 +1,29 @@
-<p-menubar class="sticky top-0">
-    <ng-template pTemplate="start">
-        <p-button [text]="true" (click)="handleSidebar()">
-            <span class="material-symbols-rounded">
-                menu
-            </span>
-        </p-button>
-    </ng-template>
-</p-menubar>
+<form [formGroup]="languageForm">
+    <p-menubar class="sticky top-0">
+        <ng-template pTemplate="start">
+            <p-button [text]="true" (click)="handleSidebar()">
+                <span class="material-symbols-rounded">
+                    menu
+                </span>
+            </p-button>
+        </ng-template>
+        <ng-template pTemplate="end">
+            <p-dropdown [options]="languages" formControlName="selectedLang" optionLabel="name" placeholder="Language"
+                styleClass="w-20rem">
+
+
+                <ng-template pTemplate="selectedItem" let-selectedOption>
+                    <div class="flex align-items-center gap-2">
+                        <div>{{ selectedOption.name }}</div>
+                    </div>
+                </ng-template>
+                <ng-template let-country pTemplate="item">
+                    <div class="flex align-items-center gap-2">
+
+                        <div>{{ country.name }}</div>
+                    </div>
+                </ng-template>
+            </p-dropdown>
+        </ng-template>
+    </p-menubar>
+</form>

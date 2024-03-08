@@ -90,7 +90,16 @@ const config: Config = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "@app/(.*)": "<rootDir>/app/$1",
+    "@core/(.*)": "<rootDir>/app/core/$1",
+    "@shared/(.*)": "<rootDir>/app/shared/$1",
+    "@components/(.*)": "<rootDir>/app/shared/components/$1",
+    "@env/(.*)": "<rootDir>/environment/$1",
+    "@modules/(.*)": "<rootDir>/app/modules/$1",
+    "@data/(.*)": "<rootDir>/app/data/$1",
+    "@layout/(.*)": "<rootDir>/app/layout/$1"
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -126,10 +135,9 @@ const config: Config = {
   // rootDir: undefined,
 
   // A list of paths to directories that Jest should use to search for files in
-  // roots: [
-  //   "<rootDir>"
-  // ],
-
+  roots: [
+    "<rootDir>/src"
+  ],
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
 

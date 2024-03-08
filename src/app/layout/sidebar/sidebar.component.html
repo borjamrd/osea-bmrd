@@ -5,7 +5,8 @@
     <div class="flex flex-col gap-2 mt-2">
 
         @for (item of menuItems; track $index) {
-        <p-button [label]="item.text" (onClick)="close()" [link]="true" [routerLink]="item.link"></p-button>
+        <p-button (onClick)="close()" [link]="true" [routerLink]="item.link">
+            {{item.text | translate}}</p-button>
         }
     </div>
 

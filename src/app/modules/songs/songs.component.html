@@ -1,11 +1,15 @@
 <div class="flex gap-5 flex-col md:flex-row flex-wrap">
     <div class="w-full flex mt-2">
         <p-button class="lg:m-auto fixed right-5 bottom-5 lg:relative z-10" routerLink="/songs/add-song">
-            <span class="hidden lg:block">Add song</span>
+            <span class="hidden lg:block">{{'Add song' | translate}}</span>
             <span class="material-symbols-rounded lg:hidden ">
                 add
             </span>
         </p-button>
+    </div>
+    <div class="flex justify-center w-full">
+        <p>{{'Select any song to see its information and be able to modify it. You can also add new songs.'| translate}}
+        </p>
     </div>
 
     @for (song of songs$ | async; track $index) {

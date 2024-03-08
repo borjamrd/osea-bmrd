@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardSongComponent } from './card-song.component';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+
 
 describe('CardSongComponent', () => {
   let component: CardSongComponent;
@@ -8,10 +10,12 @@ describe('CardSongComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardSongComponent]
+      imports: [CardSongComponent, RouterModule],
+      providers: [ActivatedRoute]
+
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(CardSongComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
