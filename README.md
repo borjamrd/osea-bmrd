@@ -20,6 +20,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via Jest
+Run `test:coveraget` to execute the unit tests via Jest and see code test's coverage
+
 
 ## Tech used
 
@@ -34,6 +36,12 @@ In order to create a fast-reliable application I've choose the following stack:
 
 ## Sections
 
-- [ ] Songs list
-- [ ] Song details
-- [ ] New song
+- [x] layout + header + sidebar
+- [x] Songs list
+- [x] Song details
+- [x] New song
+
+## Comments
+- [x] error-interceptor added to handle error  in http-requests
+- [x] message service implemented to visualize notifications in toasts
+
