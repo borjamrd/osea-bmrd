@@ -1,8 +1,10 @@
 <p-sidebar [(visible)]="sidebarVisible">
-    <h3>Sidebar</h3>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
+
+    <div class="flex flex-col gap-2">
+        <h3 class="ms-4">Menu</h3>
+        @for (item of menuItems; track $index) {
+        <p-button [label]="item.text" [link]="true" [routerLink]="item.link"></p-button>
+        }
+    </div>
+
 </p-sidebar>
